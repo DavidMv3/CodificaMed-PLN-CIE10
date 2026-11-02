@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CodificaMed · Codificación CIE-10 mediante PLN</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, sans-serif; color: #263744; background: #f4f6f6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    header { background: #1d3546; color: #fff; padding: 19px max(24px, calc((100vw - 1080px)/2)); }
+    .brand { font-weight: 750; font-size: 22px; letter-spacing: .2px; }
+    .sub { font-size: 13px; opacity: .84; font-weight: 400; margin-top: 4px; }
+    main { max-width: 1080px; margin: 28px auto; padding: 0 20px 40px; }
+    h1 { margin: 0 0 8px; font-size: 26px; }
+    p { line-height: 1.55; }
+    .intro { color: #62717b; margin-bottom: 24px; }
+    .columns { display: grid; grid-template-columns: minmax(0,1fr) minmax(320px,.92fr); align-items: start; gap: 20px; }
+    .panel { background: #fff; border: 1px solid #dbe3e6; padding: 24px; border-radius: 12px; box-shadow: 0 5px 20px #16314408; }
+    h2 { font-size: 18px; margin: 0 0 17px; }
+    label { display: block; font-size: 14px; font-weight: 650; margin-bottom: 9px; }
+    textarea, select { width: 100%; border: 1px solid #aebdc6; border-radius: 8px; padding: 12px; font: inherit; color: inherit; background: white; }
+    textarea { min-height: 175px; resize: vertical; line-height: 1.55; }
+    textarea:focus-visible, select:focus-visible, button:focus-visible { outline: 3px solid #85b7b3; outline-offset: 2px; }
+    .row { display: flex; align-items: flex-end; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+    .grow { flex: 1; }
+    button { border: none; cursor: pointer; background: #146d71; border-radius: 8px; color: white; padding: 12px 16px; font: inherit; font-weight: 650; }
+    button:disabled { opacity: .58; cursor: wait; }
+    .secondary { background: #e8f0f0; color: #24515b; }
+    button:hover:not(:disabled) { filter: brightness(.95); }
+    .hint { font-size: 12px; color: #67757e; margin: 8px 0 0; }
+    .empty { border: 1px dashed #c3cfd3; border-radius: 10px; color: #6d7b82; padding: 26px; text-align: center; }
+    .status { font-size: 13px; margin-top: 16px; min-height: 24px; color: #526c76; }
+    .error { color: #9b3131; }
+    .group-title { font-weight: 740; margin-top: 17px; border-bottom: 1px solid #e2e8eb; padding-bottom: 8px; }
+    .item { padding: 12px 0; border-bottom: 1px solid #e8ecee; }
+    .item:last-child { border: none; }
+    .code { display: inline-block; font-weight: 700; color: #155964; background: #edf5f3; border-radius: 6px; padding: 3px 8px; margin-right: 6px; }
+    .status-tag { display: inline-block; padding: 3px 8px; border-radius: 8px; background: #f6e9e4; color: #9e4c27; font-size: 12px; }
+    .evidence { margin-top: 7px; font-size: 13px; color: #50616d; }
+    .notice { padding: 13px 15px; background: #fcf5e8; border: 1px solid #e9d3a7; border-radius: 8px; color: #765b30; margin-top: 22px; font-size: 13px; }
+    @media(max-width: 800px) { .columns { grid-template-columns: 1fr; } header { padding: 18px 22px; } }
+  </style>
+</head>
+<body>
+  <header><div class="brand">CodificaMed</div><div class="sub">Prototipo académico · Codificación automática CIE-10 con PLN</div></header>
+  <main>
+    <h1>Análisis de notas clínicas</h1>
+    <p class="intro">Escribe una nota <strong>ficticia</strong> para obtener códigos sugeridos, evidencias textuales y diagnósticos descartados.</p>
+    <div class="columns">
+      <section class="panel">
+        <h2>Nota clínica</h2>
+        <label for="nota">Texto de prueba</label>
+        <textarea id="nota" maxlength="5000">Paciente de 55 años con antecedentes de HTA y DM2. Presenta cefalea. Niega fiebre y se descarta neumonía.</textarea>
+        <div class="row">
+          <div class="grow"><label for="proveedor">Modelo de inteligencia artificial</label>
+          <select id="proveedor"><option value="ollama">Ollama · Local</option><option value="claude">Claude · API externa</option><option value="gemini">Gemini · API externa gratis*</option></select></div>
+          <button id="analizar" type="button">Analizar nota</button>
+        </div>
+        <div class="row"><div class="grow"><label for="motor">Modo de análisis</label>
+          <select id="motor"><option value="hibrido">Híbrido (reglas + modelo)</option><option value="solo_llm">Solo modelo LLM</option><option value="solo_reglas">Solo reglas PLN</option></select></div></div>
+        <div class="row"><button id="ejemplo" class="secondary" type="button">Restaurar ejemplo</button><button id="exportar" class="secondary" type="button" disabled>Exportar JSON</button></div>
+        <div id="estado" class="status" role="status" aria-live="polite"></div>
+        <p class="hint">Gemini y Claude requieren clave API privada en .env. El modo solo reglas funciona sin conexión al modelo.</p>
+      </section>
+      <section class="panel">
+        <h2>Resultados del análisis</h2>
+        <div id="resultados"><div class="empty">Los hallazgos aparecerán aquí después de ejecutar el análisis.</div></div>
+      </section>
+    </div>
+    <div class="notice"><strong>Uso educativo exclusivamente.</strong> Catálogo académico seleccionado de 22 códigos CIE-10. No ingreses historias clínicas reales ni utilices estos resultados para atención médica, diagnóstico o facturación.</div>
+  </main>
+  <script>
+    'use strict';
+    const EJEMPLO = 'Paciente de 55 años con antecedentes de HTA y DM2. Presenta cefalea. Niega fiebre y se descarta neumonía.';
+    const $ = id => document.getElementById(id);
+    let ultimo = null;
+    $('ejemplo').addEventListener('click', () => { $('nota').value = EJEMPLO; });
+    function elemento(etiqueta, texto, clase) {
+      const e = document.createElement(etiqueta);
+      if (texto !== undefined) e.textContent = String(texto);
+      if (clase) e.className = clase;
+      return e;
+    }
+    function dibujarGrupo(contenedor, titulo, items) {
+      contenedor.appendChild(elemento('div', `${titulo} (${items.length})`, 'group-title'));
+      if (!items.length) { contenedor.appendChild(elemento('p', 'Sin hallazgos en este grupo.', 'hint')); return; }
+      for (const item of items) {
+        const bloque = elemento('div', undefined, 'item');
+        bloque.appendChild(elemento('span', item.codigo || '—', 'code'));
+        bloque.appendChild(elemento('span', item.descripcion || 'Código sin descripción'));
+        if (titulo.startsWith('No')) { bloque.appendChild(document.createTextNode(' ')); bloque.appendChild(elemento('span', item.estado || 'revisar', 'status-tag')); }
+        bloque.appendChild(elemento('div', `Evidencia: «${item.evidencia || 'No especificada'}»`, 'evidence'));
+        contenedor.appendChild(bloque);
+      }
+    }
+    $('analizar').addEventListener('click', async () => {
+      const nota = $('nota').value.trim();
+      if (nota.length < 10) { $('estado').textContent = 'Escribe una nota de al menos 10 caracteres.'; $('estado').className = 'status error'; return; }
+      $('analizar').disabled = true; $('exportar').disabled = true;
+      $('estado').className = 'status'; $('estado').textContent = 'Analizando la nota con el modelo seleccionado…';
+      const inicio = performance.now();
+      try {
+        const respuesta = await fetch('/api/codificamed/analizar', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({nota, proveedor:$('proveedor').value, motor:$('motor').value}) });
+        const datos = await respuesta.json();
+        if (!respuesta.ok) { throw Error(typeof datos.detail === 'string' ? datos.detail : `Error HTTP ${respuesta.status}`); }
+        ultimo = datos;
+        const contenedor = $('resultados'); contenedor.replaceChildren();
+        contenedor.appendChild(elemento('p', `Modelo: ${datos.modelo || 'No indicado'} · Modo: ${datos.motor || 'No indicado'}`, 'hint'));
+        dibujarGrupo(contenedor, 'Códigos sugeridos', Array.isArray(datos.sugeridos) ? datos.sugeridos : []);
+        dibujarGrupo(contenedor, 'No sugeridos / descartados', Array.isArray(datos.no_sugeridos) ? datos.no_sugeridos : []);
+        $('estado').textContent = `Análisis completado en ${((performance.now()-inicio)/1000).toFixed(1)} segundos.`;
+        $('exportar').disabled = false;
+      } catch (e) { $('estado').className = 'status error'; $('estado').textContent = `No se pudo completar: ${e.message}`; }
+      finally { $('analizar').disabled = false; }
+    });
+    $('exportar').addEventListener('click', () => {
+      if (!ultimo) return;
+      const blob = new Blob([JSON.stringify(ultimo,null,2)], {type:'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'codificamed-resultado.json'; a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,675 @@
+{
+  "fecha_utc": "2026-10-30T15:01:50.651131+00:00",
+  "tipo": "micro-promedio por par (codigo_CIE10, estado) y por caso; etiquetas sintéticas académicas",
+  "modo": "api",
+  "motor": "solo_llm",
+  "proveedor_solicitado": "ollama",
+  "modelo_observado": "qwen2.5:3b",
+  "total_casos": 20,
+  "casos_completados": 20,
+  "casos_fallidos": 0,
+  "tp": 17,
+  "fp": 7,
+  "fn": 16,
+  "precision": 0.7083,
+  "recall": 0.5152,
+  "f1": 0.5965,
+  "duracion_acumulada_segundos": 465.47,
+  "nota_metodologica": "Se excluyen los casos con error técnico del cálculo; no representan predicciones negativas. Comparar modelos usando idénticos casos y parámetros. No hay validación clínica ni corpus real.",
+  "casos": [
+    {
+      "id": "C01",
+      "nota_ficticia": "Paciente de 55 años con antecedentes de HTA y DM2. Presenta cefalea. Niega fiebre y se descarta neumonía.",
+      "esperados": [
+        [
+          "E11.9",
+          "confirmado"
+        ],
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "J18.9",
+          "descartado"
+        ],
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "E11.9",
+          "confirmado"
+        ],
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "J18.9",
+          "descartado"
+        ],
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "E11.9",
+          "confirmado"
+        ],
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "J18.9",
+          "descartado"
+        ],
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 27.887
+    },
+    {
+      "id": "C02",
+      "nota_ficticia": "Paciente con HTA controlada.",
+      "esperados": [
+        [
+          "I10",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "I10",
+          "descartado"
+        ]
+      ],
+      "aciertos": [],
+      "falsos_positivos": [
+        [
+          "I10",
+          "descartado"
+        ]
+      ],
+      "falsos_negativos": [
+        [
+          "I10",
+          "confirmado"
+        ]
+      ],
+      "duracion_segundos": 21.4
+    },
+    {
+      "id": "C03",
+      "nota_ficticia": "Paciente con DM2. No presenta cefalea.",
+      "esperados": [
+        [
+          "E11.9",
+          "confirmado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "E11.9",
+          "descartado"
+        ]
+      ],
+      "aciertos": [],
+      "falsos_positivos": [
+        [
+          "E11.9",
+          "descartado"
+        ]
+      ],
+      "falsos_negativos": [
+        [
+          "E11.9",
+          "confirmado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "duracion_segundos": 23.243
+    },
+    {
+      "id": "C04",
+      "nota_ficticia": "Se descarta neumonía.",
+      "esperados": [
+        [
+          "J18.9",
+          "descartado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "J18.9",
+          "descartado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "J18.9",
+          "descartado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 21.536
+    },
+    {
+      "id": "C05",
+      "nota_ficticia": "Niega cefalea. Sin HTA.",
+      "esperados": [
+        [
+          "I10",
+          "negado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [],
+      "falsos_positivos": [
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "falsos_negativos": [
+        [
+          "I10",
+          "negado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "duracion_segundos": 20.738
+    },
+    {
+      "id": "C06",
+      "nota_ficticia": "Probable neumonía.",
+      "esperados": [
+        [
+          "J18.9",
+          "incierto"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "J18.9",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [],
+      "falsos_positivos": [
+        [
+          "J18.9",
+          "confirmado"
+        ]
+      ],
+      "falsos_negativos": [
+        [
+          "J18.9",
+          "incierto"
+        ]
+      ],
+      "duracion_segundos": 21.639
+    },
+    {
+      "id": "C07",
+      "nota_ficticia": "No se descarta neumonía.",
+      "esperados": [
+        [
+          "J18.9",
+          "incierto"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "J18.9",
+          "negado"
+        ]
+      ],
+      "aciertos": [],
+      "falsos_positivos": [
+        [
+          "J18.9",
+          "negado"
+        ]
+      ],
+      "falsos_negativos": [
+        [
+          "J18.9",
+          "incierto"
+        ]
+      ],
+      "duracion_segundos": 21.904
+    },
+    {
+      "id": "C08",
+      "nota_ficticia": "Dolor de cabeza persistente.",
+      "esperados": [
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 21.658
+    },
+    {
+      "id": "C09",
+      "nota_ficticia": "Paciente con hipertensión arterial y diabetes mellitus tipo 2.",
+      "esperados": [
+        [
+          "E11.9",
+          "confirmado"
+        ],
+        [
+          "I10",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "I10",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "I10",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [
+        [
+          "E11.9",
+          "confirmado"
+        ]
+      ],
+      "duracion_segundos": 21.627
+    },
+    {
+      "id": "C10",
+      "nota_ficticia": "Neumonía confirmada.",
+      "esperados": [
+        [
+          "J18.9",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [],
+      "aciertos": [],
+      "falsos_positivos": [],
+      "falsos_negativos": [
+        [
+          "J18.9",
+          "confirmado"
+        ]
+      ],
+      "duracion_segundos": 37.185
+    },
+    {
+      "id": "C11",
+      "nota_ficticia": "Se descarta diabetes tipo 2. Presenta cefalea.",
+      "esperados": [
+        [
+          "E11.9",
+          "descartado"
+        ],
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [
+        [
+          "E11.9",
+          "descartado"
+        ]
+      ],
+      "duracion_segundos": 17.403
+    },
+    {
+      "id": "C12",
+      "nota_ficticia": "Examen de control rutinario, sin hallazgos clínicos relevantes.",
+      "esperados": [],
+      "obtenidos": [],
+      "aciertos": [],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 25.622
+    },
+    {
+      "id": "C13",
+      "nota_ficticia": "No hay evidencia de HTA. Sin neumonía.",
+      "esperados": [
+        [
+          "I10",
+          "negado"
+        ],
+        [
+          "J18.9",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "I10",
+          "descartado"
+        ]
+      ],
+      "aciertos": [],
+      "falsos_positivos": [
+        [
+          "I10",
+          "descartado"
+        ]
+      ],
+      "falsos_negativos": [
+        [
+          "I10",
+          "negado"
+        ],
+        [
+          "J18.9",
+          "negado"
+        ]
+      ],
+      "duracion_segundos": 22.068
+    },
+    {
+      "id": "C14",
+      "nota_ficticia": "HTA con cefalea. Neumonía descartada.",
+      "esperados": [
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "J18.9",
+          "descartado"
+        ],
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "J18.9",
+          "descartado"
+        ],
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "J18.9",
+          "descartado"
+        ],
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 21.669
+    },
+    {
+      "id": "C15",
+      "nota_ficticia": "Se sospecha diabetes tipo 2.",
+      "esperados": [
+        [
+          "E11.9",
+          "incierto"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "E11.9",
+          "incierto"
+        ]
+      ],
+      "aciertos": [
+        [
+          "E11.9",
+          "incierto"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 22.08
+    },
+    {
+      "id": "C16",
+      "nota_ficticia": "Niega dolor de cabeza. Presenta hipertensión.",
+      "esperados": [
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 23.306
+    },
+    {
+      "id": "C17",
+      "nota_ficticia": "Paciente sin evidencia de diabetes tipo 2 ni cefalea.",
+      "esperados": [
+        [
+          "E11.9",
+          "negado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "E11.9",
+          "negado"
+        ],
+        [
+          "R51",
+          "descartado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "E11.9",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [
+        [
+          "R51",
+          "descartado"
+        ]
+      ],
+      "falsos_negativos": [
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "duracion_segundos": 24.604
+    },
+    {
+      "id": "C18",
+      "nota_ficticia": "Paciente con antecedentes de DM2 y HTA, sin cefalea.",
+      "esperados": [
+        [
+          "E11.9",
+          "confirmado"
+        ],
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "E11.9",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "E11.9",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "duracion_segundos": 23.046
+    },
+    {
+      "id": "C19",
+      "nota_ficticia": "Se descartó neumonía.",
+      "esperados": [
+        [
+          "J18.9",
+          "descartado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "J18.9",
+          "descartado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "J18.9",
+          "descartado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 21.761
+    },
+    {
+      "id": "C20",
+      "nota_ficticia": "Neumonía en estudio, sin confirmación.",
+      "esperados": [
+        [
+          "J18.9",
+          "incierto"
+        ]
+      ],
+      "obtenidos": [],
+      "aciertos": [],
+      "falsos_positivos": [],
+      "falsos_negativos": [
+        [
+          "J18.9",
+          "incierto"
+        ]
+      ],
+      "duracion_segundos": 25.092
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {"id":"C01","nota":"Paciente de 55 años con antecedentes de HTA y DM2. Presenta cefalea. Niega fiebre y se descarta neumonía.","esperados":[{"codigo":"I10","estado":"confirmado"},{"codigo":"E11.9","estado":"confirmado"},{"codigo":"R51","estado":"confirmado"},{"codigo":"J18.9","estado":"descartado"}]},
+  {"id":"C02","nota":"Paciente con HTA controlada.","esperados":[{"codigo":"I10","estado":"confirmado"}]},
+  {"id":"C03","nota":"Paciente con DM2. No presenta cefalea.","esperados":[{"codigo":"E11.9","estado":"confirmado"},{"codigo":"R51","estado":"negado"}]},
+  {"id":"C04","nota":"Se descarta neumonía.","esperados":[{"codigo":"J18.9","estado":"descartado"}]},
+  {"id":"C05","nota":"Niega cefalea. Sin HTA.","esperados":[{"codigo":"R51","estado":"negado"},{"codigo":"I10","estado":"negado"}]},
+  {"id":"C06","nota":"Probable neumonía.","esperados":[{"codigo":"J18.9","estado":"incierto"}]},
+  {"id":"C07","nota":"No se descarta neumonía.","esperados":[{"codigo":"J18.9","estado":"incierto"}]},
+  {"id":"C08","nota":"Dolor de cabeza persistente.","esperados":[{"codigo":"R51","estado":"confirmado"}]},
+  {"id":"C09","nota":"Paciente con hipertensión arterial y diabetes mellitus tipo 2.","esperados":[{"codigo":"I10","estado":"confirmado"},{"codigo":"E11.9","estado":"confirmado"}]},
+  {"id":"C10","nota":"Neumonía confirmada.","esperados":[{"codigo":"J18.9","estado":"confirmado"}]},
+  {"id":"C11","nota":"Se descarta diabetes tipo 2. Presenta cefalea.","esperados":[{"codigo":"E11.9","estado":"descartado"},{"codigo":"R51","estado":"confirmado"}]},
+  {"id":"C12","nota":"Examen de control rutinario, sin hallazgos clínicos relevantes.","esperados":[]},
+  {"id":"C13","nota":"No hay evidencia de HTA. Sin neumonía.","esperados":[{"codigo":"I10","estado":"negado"},{"codigo":"J18.9","estado":"negado"}]},
+  {"id":"C14","nota":"HTA con cefalea. Neumonía descartada.","esperados":[{"codigo":"I10","estado":"confirmado"},{"codigo":"R51","estado":"confirmado"},{"codigo":"J18.9","estado":"descartado"}]},
+  {"id":"C15","nota":"Se sospecha diabetes tipo 2.","esperados":[{"codigo":"E11.9","estado":"incierto"}]},
+  {"id":"C16","nota":"Niega dolor de cabeza. Presenta hipertensión.","esperados":[{"codigo":"R51","estado":"negado"},{"codigo":"I10","estado":"confirmado"}]},
+  {"id":"C17","nota":"Paciente sin evidencia de diabetes tipo 2 ni cefalea.","esperados":[{"codigo":"E11.9","estado":"negado"},{"codigo":"R51","estado":"negado"}]},
+  {"id":"C18","nota":"Paciente con antecedentes de DM2 y HTA, sin cefalea.","esperados":[{"codigo":"E11.9","estado":"confirmado"},{"codigo":"I10","estado":"confirmado"},{"codigo":"R51","estado":"negado"}]},
+  {"id":"C19","nota":"Se descartó neumonía.","esperados":[{"codigo":"J18.9","estado":"descartado"}]},
+  {"id":"C20","nota":"Neumonía en estudio, sin confirmación.","esperados":[{"codigo":"J18.9","estado":"incierto"}]}
+]

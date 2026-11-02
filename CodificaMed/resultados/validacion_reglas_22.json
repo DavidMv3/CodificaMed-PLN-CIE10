@@ -1,0 +1,1535 @@
+{
+  "fecha_utc": "2026-11-02T16:50:31.755380+00:00",
+  "tipo": "Validacion academica de notas sinteticas nuevas, micro promedio por par (codigo, estado)",
+  "fuente_casos": "tests\\casos_validacion_22.json",
+  "modo": "reglas",
+  "motor": "solo_reglas",
+  "proveedor": null,
+  "modelo_observado": "reglas_sin_llm",
+  "total_casos": 40,
+  "casos_completados": 40,
+  "casos_fallidos": 0,
+  "tp": 80,
+  "fp": 2,
+  "fn": 2,
+  "precision": 0.9756,
+  "recall": 0.9756,
+  "f1": 0.9756,
+  "duracion_acumulada_segundos": 0.493,
+  "nota_metodologica": "Etiquetas creadas con notas ficticias, sin validacion clinica externa. No usar para toma de decisiones medicas. La cobertura se limita a 22 codigos.",
+  "casos": [
+    {
+      "id": "V01",
+      "nota_ficticia": "En la consulta se registra migraña diagnosticada. El paciente niega tos.",
+      "esperados": [
+        [
+          "G43.9",
+          "confirmado"
+        ],
+        [
+          "R05",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "G43.9",
+          "confirmado"
+        ],
+        [
+          "R05",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "G43.9",
+          "confirmado"
+        ],
+        [
+          "R05",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.493
+    },
+    {
+      "id": "V02",
+      "nota_ficticia": "Se descartó conjuntivitis; se documenta dermatitis en ambos antebrazos.",
+      "esperados": [
+        [
+          "H10.9",
+          "descartado"
+        ],
+        [
+          "L30.9",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "H10.9",
+          "descartado"
+        ],
+        [
+          "L30.9",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "H10.9",
+          "descartado"
+        ],
+        [
+          "L30.9",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V03",
+      "nota_ficticia": "La nota indica gastritis diagnosticada. Se sospecha reflujo gastroesofágico.",
+      "esperados": [
+        [
+          "K21.9",
+          "incierto"
+        ],
+        [
+          "K29.7",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "K21.9",
+          "incierto"
+        ],
+        [
+          "K29.7",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "K21.9",
+          "incierto"
+        ],
+        [
+          "K29.7",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V04",
+      "nota_ficticia": "Hipotiroidismo en tratamiento. No presenta fiebre en esta consulta.",
+      "esperados": [
+        [
+          "E03.9",
+          "confirmado"
+        ],
+        [
+          "R50.9",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "E03.9",
+          "confirmado"
+        ],
+        [
+          "R50.9",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "E03.9",
+          "confirmado"
+        ],
+        [
+          "R50.9",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V05",
+      "nota_ficticia": "No refiere lumbalgia. La HTA consta en controles anteriores.",
+      "esperados": [
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "M54.5",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "M54.5",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "M54.5",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V06",
+      "nota_ficticia": "Diagnóstico documentado de anemia. Se descarta infección urinaria.",
+      "esperados": [
+        [
+          "D64.9",
+          "confirmado"
+        ],
+        [
+          "N39.0",
+          "descartado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "D64.9",
+          "confirmado"
+        ],
+        [
+          "N39.0",
+          "descartado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "D64.9",
+          "confirmado"
+        ],
+        [
+          "N39.0",
+          "descartado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V07",
+      "nota_ficticia": "Se sospecha bronquitis aguda. También se observa tos persistente.",
+      "esperados": [
+        [
+          "J20.9",
+          "incierto"
+        ],
+        [
+          "R05",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "J20.9",
+          "incierto"
+        ],
+        [
+          "R05",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "J20.9",
+          "incierto"
+        ],
+        [
+          "R05",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V08",
+      "nota_ficticia": "Antecedente documentado de asma. En la consulta presenta dolor abdominal.",
+      "esperados": [
+        [
+          "J45.9",
+          "confirmado"
+        ],
+        [
+          "R10.9",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "J45.9",
+          "confirmado"
+        ],
+        [
+          "R10.9",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "J45.9",
+          "confirmado"
+        ],
+        [
+          "R10.9",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V09",
+      "nota_ficticia": "Se confirma migraña. Niega fiebre desde el inicio del cuadro.",
+      "esperados": [
+        [
+          "G43.9",
+          "confirmado"
+        ],
+        [
+          "R50.9",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "G43.9",
+          "confirmado"
+        ],
+        [
+          "R50.9",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "G43.9",
+          "confirmado"
+        ],
+        [
+          "R50.9",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V10",
+      "nota_ficticia": "Se registra DM2 en control. También presenta estreñimiento.",
+      "esperados": [
+        [
+          "E11.9",
+          "confirmado"
+        ],
+        [
+          "K59.0",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "E11.9",
+          "confirmado"
+        ],
+        [
+          "K59.0",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "E11.9",
+          "confirmado"
+        ],
+        [
+          "K59.0",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V11",
+      "nota_ficticia": "Se diagnostica infección aguda de vías respiratorias superiores. Bronquitis aguda descartada.",
+      "esperados": [
+        [
+          "J06.9",
+          "confirmado"
+        ],
+        [
+          "J20.9",
+          "descartado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "J06.9",
+          "confirmado"
+        ],
+        [
+          "J20.9",
+          "descartado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "J06.9",
+          "confirmado"
+        ],
+        [
+          "J20.9",
+          "descartado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V12",
+      "nota_ficticia": "Neumonía en estudio, sin confirmación. No hay evidencia de infección de vías urinarias.",
+      "esperados": [
+        [
+          "J18.9",
+          "incierto"
+        ],
+        [
+          "N39.0",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "J18.9",
+          "incierto"
+        ],
+        [
+          "N39.0",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "J18.9",
+          "incierto"
+        ],
+        [
+          "N39.0",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V13",
+      "nota_ficticia": "Diagnóstico de trastorno de ansiedad. Niega dolor abdominal.",
+      "esperados": [
+        [
+          "F41.9",
+          "confirmado"
+        ],
+        [
+          "R10.9",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "F41.9",
+          "confirmado"
+        ],
+        [
+          "R10.9",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "F41.9",
+          "confirmado"
+        ],
+        [
+          "R10.9",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V14",
+      "nota_ficticia": "Se descarta dislipidemia. Consta hipotiroidismo confirmado.",
+      "esperados": [
+        [
+          "E03.9",
+          "confirmado"
+        ],
+        [
+          "E78.5",
+          "descartado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "E03.9",
+          "confirmado"
+        ],
+        [
+          "E78.5",
+          "descartado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "E03.9",
+          "confirmado"
+        ],
+        [
+          "E78.5",
+          "descartado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V15",
+      "nota_ficticia": "Posible dermatitis. Se observa conjuntivitis diagnosticada.",
+      "esperados": [
+        [
+          "H10.9",
+          "confirmado"
+        ],
+        [
+          "L30.9",
+          "incierto"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "H10.9",
+          "confirmado"
+        ],
+        [
+          "L30.9",
+          "incierto"
+        ]
+      ],
+      "aciertos": [
+        [
+          "H10.9",
+          "confirmado"
+        ],
+        [
+          "L30.9",
+          "incierto"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V16",
+      "nota_ficticia": "Paciente con dislipidemia conocida. Se descarta gastritis.",
+      "esperados": [
+        [
+          "E78.5",
+          "confirmado"
+        ],
+        [
+          "K29.7",
+          "descartado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "E78.5",
+          "confirmado"
+        ],
+        [
+          "K29.7",
+          "descartado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "E78.5",
+          "confirmado"
+        ],
+        [
+          "K29.7",
+          "descartado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V17",
+      "nota_ficticia": "No se descarta neumonía. La nota también registra cefalea actual.",
+      "esperados": [
+        [
+          "J18.9",
+          "incierto"
+        ],
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "J18.9",
+          "incierto"
+        ],
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "J18.9",
+          "incierto"
+        ],
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V18",
+      "nota_ficticia": "Se encuentra estreñimiento documentado. Sin tos durante la consulta.",
+      "esperados": [
+        [
+          "K59.0",
+          "confirmado"
+        ],
+        [
+          "R05",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "K59.0",
+          "confirmado"
+        ],
+        [
+          "R05",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "K59.0",
+          "confirmado"
+        ],
+        [
+          "R05",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V19",
+      "nota_ficticia": "Se sospecha anemia. Se documenta hipertensión arterial.",
+      "esperados": [
+        [
+          "D64.9",
+          "incierto"
+        ],
+        [
+          "I10",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "D64.9",
+          "incierto"
+        ],
+        [
+          "I10",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "D64.9",
+          "incierto"
+        ],
+        [
+          "I10",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V20",
+      "nota_ficticia": "Infección de vías urinarias diagnosticada. Se descartó dolor lumbar.",
+      "esperados": [
+        [
+          "M54.5",
+          "descartado"
+        ],
+        [
+          "N39.0",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "M54.5",
+          "descartado"
+        ],
+        [
+          "N39.0",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "M54.5",
+          "descartado"
+        ],
+        [
+          "N39.0",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V21",
+      "nota_ficticia": "El informe incluye diagnóstico de ERGE. Fiebre negada por el paciente.",
+      "esperados": [
+        [
+          "K21.9",
+          "confirmado"
+        ],
+        [
+          "R50.9",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "K21.9",
+          "confirmado"
+        ],
+        [
+          "R50.9",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "K21.9",
+          "confirmado"
+        ],
+        [
+          "R50.9",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V22",
+      "nota_ficticia": "Asma en seguimiento. No presenta bronquitis aguda.",
+      "esperados": [
+        [
+          "J20.9",
+          "negado"
+        ],
+        [
+          "J45.9",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "J20.9",
+          "negado"
+        ],
+        [
+          "J45.9",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "J20.9",
+          "negado"
+        ],
+        [
+          "J45.9",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V23",
+      "nota_ficticia": "Trastorno de ansiedad en estudio, sin confirmación. No presenta migraña.",
+      "esperados": [
+        [
+          "F41.9",
+          "incierto"
+        ],
+        [
+          "G43.9",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "F41.9",
+          "incierto"
+        ],
+        [
+          "G43.9",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "F41.9",
+          "incierto"
+        ],
+        [
+          "G43.9",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V24",
+      "nota_ficticia": "Dolor abdominal y tos presentes. Neumonía descartada.",
+      "esperados": [
+        [
+          "J18.9",
+          "descartado"
+        ],
+        [
+          "R05",
+          "confirmado"
+        ],
+        [
+          "R10.9",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "J18.9",
+          "descartado"
+        ],
+        [
+          "R05",
+          "confirmado"
+        ],
+        [
+          "R10.9",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "J18.9",
+          "descartado"
+        ],
+        [
+          "R05",
+          "confirmado"
+        ],
+        [
+          "R10.9",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V25",
+      "nota_ficticia": "Posible hiperlipidemia. No hay evidencia de diabetes tipo 2.",
+      "esperados": [
+        [
+          "E11.9",
+          "negado"
+        ],
+        [
+          "E78.5",
+          "incierto"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "E11.9",
+          "negado"
+        ],
+        [
+          "E78.5",
+          "incierto"
+        ]
+      ],
+      "aciertos": [
+        [
+          "E11.9",
+          "negado"
+        ],
+        [
+          "E78.5",
+          "incierto"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V26",
+      "nota_ficticia": "Se descarta conjuntivitis. Se registra infección aguda de vías respiratorias superiores.",
+      "esperados": [
+        [
+          "H10.9",
+          "descartado"
+        ],
+        [
+          "J06.9",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "H10.9",
+          "descartado"
+        ],
+        [
+          "J06.9",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "H10.9",
+          "descartado"
+        ],
+        [
+          "J06.9",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V27",
+      "nota_ficticia": "No hay evidencia de hipertensión arterial. Presenta cefalea ocasional.",
+      "esperados": [
+        [
+          "I10",
+          "negado"
+        ],
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "I10",
+          "negado"
+        ],
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "I10",
+          "negado"
+        ],
+        [
+          "R51",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V28",
+      "nota_ficticia": "Sin evidencia de gastritis. Dislipidemia en seguimiento.",
+      "esperados": [
+        [
+          "E78.5",
+          "confirmado"
+        ],
+        [
+          "K29.7",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "E78.5",
+          "confirmado"
+        ],
+        [
+          "K29.7",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "E78.5",
+          "confirmado"
+        ],
+        [
+          "K29.7",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V29",
+      "nota_ficticia": "Niega estreñimiento. Se investiga una posible infección urinaria.",
+      "esperados": [
+        [
+          "K59.0",
+          "negado"
+        ],
+        [
+          "N39.0",
+          "incierto"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "K59.0",
+          "negado"
+        ],
+        [
+          "N39.0",
+          "incierto"
+        ]
+      ],
+      "aciertos": [
+        [
+          "K59.0",
+          "negado"
+        ],
+        [
+          "N39.0",
+          "incierto"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V30",
+      "nota_ficticia": "Se descarta trastorno de ansiedad. Paciente con dermatitis confirmada.",
+      "esperados": [
+        [
+          "F41.9",
+          "descartado"
+        ],
+        [
+          "L30.9",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "F41.9",
+          "descartado"
+        ],
+        [
+          "L30.9",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "F41.9",
+          "descartado"
+        ],
+        [
+          "L30.9",
+          "confirmado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V31",
+      "nota_ficticia": "Hipotiroidismo posible. Se descarta anemia.",
+      "esperados": [
+        [
+          "D64.9",
+          "descartado"
+        ],
+        [
+          "E03.9",
+          "incierto"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "D64.9",
+          "descartado"
+        ],
+        [
+          "E03.9",
+          "confirmado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "D64.9",
+          "descartado"
+        ]
+      ],
+      "falsos_positivos": [
+        [
+          "E03.9",
+          "confirmado"
+        ]
+      ],
+      "falsos_negativos": [
+        [
+          "E03.9",
+          "incierto"
+        ]
+      ],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V32",
+      "nota_ficticia": "Sin evidencia de asma. Se documenta bronquitis aguda.",
+      "esperados": [
+        [
+          "J20.9",
+          "confirmado"
+        ],
+        [
+          "J45.9",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "J20.9",
+          "confirmado"
+        ],
+        [
+          "J45.9",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "J20.9",
+          "confirmado"
+        ],
+        [
+          "J45.9",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V33",
+      "nota_ficticia": "No se descarta infección urinaria. Presenta lumbalgia.",
+      "esperados": [
+        [
+          "M54.5",
+          "confirmado"
+        ],
+        [
+          "N39.0",
+          "incierto"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "M54.5",
+          "confirmado"
+        ],
+        [
+          "N39.0",
+          "incierto"
+        ]
+      ],
+      "aciertos": [
+        [
+          "M54.5",
+          "confirmado"
+        ],
+        [
+          "N39.0",
+          "incierto"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V34",
+      "nota_ficticia": "Dolor abdominal en estudio, sin confirmación. Tos presente.",
+      "esperados": [
+        [
+          "R05",
+          "confirmado"
+        ],
+        [
+          "R10.9",
+          "incierto"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "R05",
+          "confirmado"
+        ],
+        [
+          "R10.9",
+          "incierto"
+        ]
+      ],
+      "aciertos": [
+        [
+          "R05",
+          "confirmado"
+        ],
+        [
+          "R10.9",
+          "incierto"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V35",
+      "nota_ficticia": "Se diagnostica infección aguda de vías respiratorias superiores. No presenta cefalea.",
+      "esperados": [
+        [
+          "J06.9",
+          "confirmado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "J06.9",
+          "confirmado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "J06.9",
+          "confirmado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V36",
+      "nota_ficticia": "Visita preventiva ficticia, sin síntomas ni diagnósticos del catálogo.",
+      "esperados": [],
+      "obtenidos": [],
+      "aciertos": [],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V37",
+      "nota_ficticia": "Paciente con DM2. Se sospecha anemia. Niega conjuntivitis.",
+      "esperados": [
+        [
+          "D64.9",
+          "incierto"
+        ],
+        [
+          "E11.9",
+          "confirmado"
+        ],
+        [
+          "H10.9",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "D64.9",
+          "incierto"
+        ],
+        [
+          "E11.9",
+          "confirmado"
+        ],
+        [
+          "H10.9",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "D64.9",
+          "incierto"
+        ],
+        [
+          "E11.9",
+          "confirmado"
+        ],
+        [
+          "H10.9",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V38",
+      "nota_ficticia": "Posible gastritis. Se descarta migraña y se confirma dermatitis.",
+      "esperados": [
+        [
+          "G43.9",
+          "descartado"
+        ],
+        [
+          "K29.7",
+          "incierto"
+        ],
+        [
+          "L30.9",
+          "confirmado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "G43.9",
+          "descartado"
+        ],
+        [
+          "K29.7",
+          "incierto"
+        ],
+        [
+          "L30.9",
+          "descartado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "G43.9",
+          "descartado"
+        ],
+        [
+          "K29.7",
+          "incierto"
+        ]
+      ],
+      "falsos_positivos": [
+        [
+          "L30.9",
+          "descartado"
+        ]
+      ],
+      "falsos_negativos": [
+        [
+          "L30.9",
+          "confirmado"
+        ]
+      ],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V39",
+      "nota_ficticia": "Se descarta infección respiratoria aguda alta. Consta hipertensión arterial en seguimiento.",
+      "esperados": [
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "J06.9",
+          "descartado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "J06.9",
+          "descartado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "I10",
+          "confirmado"
+        ],
+        [
+          "J06.9",
+          "descartado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    },
+    {
+      "id": "V40",
+      "nota_ficticia": "Se documenta hipotiroidismo e hiperlipidemia. Niega cefalea.",
+      "esperados": [
+        [
+          "E03.9",
+          "confirmado"
+        ],
+        [
+          "E78.5",
+          "confirmado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "obtenidos": [
+        [
+          "E03.9",
+          "confirmado"
+        ],
+        [
+          "E78.5",
+          "confirmado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "aciertos": [
+        [
+          "E03.9",
+          "confirmado"
+        ],
+        [
+          "E78.5",
+          "confirmado"
+        ],
+        [
+          "R51",
+          "negado"
+        ]
+      ],
+      "falsos_positivos": [],
+      "falsos_negativos": [],
+      "duracion_segundos": 0.0
+    }
+  ]
+}

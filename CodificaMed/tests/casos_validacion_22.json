@@ -1,0 +1,569 @@
+[
+  {
+    "id": "V01",
+    "nota": "En la consulta se registra migraña diagnosticada. El paciente niega tos.",
+    "esperados": [
+      {
+        "codigo": "G43.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "R05",
+        "estado": "negado"
+      }
+    ]
+  },
+  {
+    "id": "V02",
+    "nota": "Se descartó conjuntivitis; se documenta dermatitis en ambos antebrazos.",
+    "esperados": [
+      {
+        "codigo": "H10.9",
+        "estado": "descartado"
+      },
+      {
+        "codigo": "L30.9",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V03",
+    "nota": "La nota indica gastritis diagnosticada. Se sospecha reflujo gastroesofágico.",
+    "esperados": [
+      {
+        "codigo": "K29.7",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "K21.9",
+        "estado": "incierto"
+      }
+    ]
+  },
+  {
+    "id": "V04",
+    "nota": "Hipotiroidismo en tratamiento. No presenta fiebre en esta consulta.",
+    "esperados": [
+      {
+        "codigo": "E03.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "R50.9",
+        "estado": "negado"
+      }
+    ]
+  },
+  {
+    "id": "V05",
+    "nota": "No refiere lumbalgia. La HTA consta en controles anteriores.",
+    "esperados": [
+      {
+        "codigo": "M54.5",
+        "estado": "negado"
+      },
+      {
+        "codigo": "I10",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V06",
+    "nota": "Diagnóstico documentado de anemia. Se descarta infección urinaria.",
+    "esperados": [
+      {
+        "codigo": "D64.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "N39.0",
+        "estado": "descartado"
+      }
+    ]
+  },
+  {
+    "id": "V07",
+    "nota": "Se sospecha bronquitis aguda. También se observa tos persistente.",
+    "esperados": [
+      {
+        "codigo": "J20.9",
+        "estado": "incierto"
+      },
+      {
+        "codigo": "R05",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V08",
+    "nota": "Antecedente documentado de asma. En la consulta presenta dolor abdominal.",
+    "esperados": [
+      {
+        "codigo": "J45.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "R10.9",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V09",
+    "nota": "Se confirma migraña. Niega fiebre desde el inicio del cuadro.",
+    "esperados": [
+      {
+        "codigo": "G43.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "R50.9",
+        "estado": "negado"
+      }
+    ]
+  },
+  {
+    "id": "V10",
+    "nota": "Se registra DM2 en control. También presenta estreñimiento.",
+    "esperados": [
+      {
+        "codigo": "E11.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "K59.0",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V11",
+    "nota": "Se diagnostica infección aguda de vías respiratorias superiores. Bronquitis aguda descartada.",
+    "esperados": [
+      {
+        "codigo": "J06.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "J20.9",
+        "estado": "descartado"
+      }
+    ]
+  },
+  {
+    "id": "V12",
+    "nota": "Neumonía en estudio, sin confirmación. No hay evidencia de infección de vías urinarias.",
+    "esperados": [
+      {
+        "codigo": "J18.9",
+        "estado": "incierto"
+      },
+      {
+        "codigo": "N39.0",
+        "estado": "negado"
+      }
+    ]
+  },
+  {
+    "id": "V13",
+    "nota": "Diagnóstico de trastorno de ansiedad. Niega dolor abdominal.",
+    "esperados": [
+      {
+        "codigo": "F41.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "R10.9",
+        "estado": "negado"
+      }
+    ]
+  },
+  {
+    "id": "V14",
+    "nota": "Se descarta dislipidemia. Consta hipotiroidismo confirmado.",
+    "esperados": [
+      {
+        "codigo": "E78.5",
+        "estado": "descartado"
+      },
+      {
+        "codigo": "E03.9",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V15",
+    "nota": "Posible dermatitis. Se observa conjuntivitis diagnosticada.",
+    "esperados": [
+      {
+        "codigo": "L30.9",
+        "estado": "incierto"
+      },
+      {
+        "codigo": "H10.9",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V16",
+    "nota": "Paciente con dislipidemia conocida. Se descarta gastritis.",
+    "esperados": [
+      {
+        "codigo": "E78.5",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "K29.7",
+        "estado": "descartado"
+      }
+    ]
+  },
+  {
+    "id": "V17",
+    "nota": "No se descarta neumonía. La nota también registra cefalea actual.",
+    "esperados": [
+      {
+        "codigo": "J18.9",
+        "estado": "incierto"
+      },
+      {
+        "codigo": "R51",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V18",
+    "nota": "Se encuentra estreñimiento documentado. Sin tos durante la consulta.",
+    "esperados": [
+      {
+        "codigo": "K59.0",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "R05",
+        "estado": "negado"
+      }
+    ]
+  },
+  {
+    "id": "V19",
+    "nota": "Se sospecha anemia. Se documenta hipertensión arterial.",
+    "esperados": [
+      {
+        "codigo": "D64.9",
+        "estado": "incierto"
+      },
+      {
+        "codigo": "I10",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V20",
+    "nota": "Infección de vías urinarias diagnosticada. Se descartó dolor lumbar.",
+    "esperados": [
+      {
+        "codigo": "N39.0",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "M54.5",
+        "estado": "descartado"
+      }
+    ]
+  },
+  {
+    "id": "V21",
+    "nota": "El informe incluye diagnóstico de ERGE. Fiebre negada por el paciente.",
+    "esperados": [
+      {
+        "codigo": "K21.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "R50.9",
+        "estado": "negado"
+      }
+    ]
+  },
+  {
+    "id": "V22",
+    "nota": "Asma en seguimiento. No presenta bronquitis aguda.",
+    "esperados": [
+      {
+        "codigo": "J45.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "J20.9",
+        "estado": "negado"
+      }
+    ]
+  },
+  {
+    "id": "V23",
+    "nota": "Trastorno de ansiedad en estudio, sin confirmación. No presenta migraña.",
+    "esperados": [
+      {
+        "codigo": "F41.9",
+        "estado": "incierto"
+      },
+      {
+        "codigo": "G43.9",
+        "estado": "negado"
+      }
+    ]
+  },
+  {
+    "id": "V24",
+    "nota": "Dolor abdominal y tos presentes. Neumonía descartada.",
+    "esperados": [
+      {
+        "codigo": "R10.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "R05",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "J18.9",
+        "estado": "descartado"
+      }
+    ]
+  },
+  {
+    "id": "V25",
+    "nota": "Posible hiperlipidemia. No hay evidencia de diabetes tipo 2.",
+    "esperados": [
+      {
+        "codigo": "E78.5",
+        "estado": "incierto"
+      },
+      {
+        "codigo": "E11.9",
+        "estado": "negado"
+      }
+    ]
+  },
+  {
+    "id": "V26",
+    "nota": "Se descarta conjuntivitis. Se registra infección aguda de vías respiratorias superiores.",
+    "esperados": [
+      {
+        "codigo": "H10.9",
+        "estado": "descartado"
+      },
+      {
+        "codigo": "J06.9",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V27",
+    "nota": "No hay evidencia de hipertensión arterial. Presenta cefalea ocasional.",
+    "esperados": [
+      {
+        "codigo": "I10",
+        "estado": "negado"
+      },
+      {
+        "codigo": "R51",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V28",
+    "nota": "Sin evidencia de gastritis. Dislipidemia en seguimiento.",
+    "esperados": [
+      {
+        "codigo": "K29.7",
+        "estado": "negado"
+      },
+      {
+        "codigo": "E78.5",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V29",
+    "nota": "Niega estreñimiento. Se investiga una posible infección urinaria.",
+    "esperados": [
+      {
+        "codigo": "K59.0",
+        "estado": "negado"
+      },
+      {
+        "codigo": "N39.0",
+        "estado": "incierto"
+      }
+    ]
+  },
+  {
+    "id": "V30",
+    "nota": "Se descarta trastorno de ansiedad. Paciente con dermatitis confirmada.",
+    "esperados": [
+      {
+        "codigo": "F41.9",
+        "estado": "descartado"
+      },
+      {
+        "codigo": "L30.9",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V31",
+    "nota": "Hipotiroidismo posible. Se descarta anemia.",
+    "esperados": [
+      {
+        "codigo": "E03.9",
+        "estado": "incierto"
+      },
+      {
+        "codigo": "D64.9",
+        "estado": "descartado"
+      }
+    ]
+  },
+  {
+    "id": "V32",
+    "nota": "Sin evidencia de asma. Se documenta bronquitis aguda.",
+    "esperados": [
+      {
+        "codigo": "J45.9",
+        "estado": "negado"
+      },
+      {
+        "codigo": "J20.9",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V33",
+    "nota": "No se descarta infección urinaria. Presenta lumbalgia.",
+    "esperados": [
+      {
+        "codigo": "N39.0",
+        "estado": "incierto"
+      },
+      {
+        "codigo": "M54.5",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V34",
+    "nota": "Dolor abdominal en estudio, sin confirmación. Tos presente.",
+    "esperados": [
+      {
+        "codigo": "R10.9",
+        "estado": "incierto"
+      },
+      {
+        "codigo": "R05",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V35",
+    "nota": "Se diagnostica infección aguda de vías respiratorias superiores. No presenta cefalea.",
+    "esperados": [
+      {
+        "codigo": "J06.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "R51",
+        "estado": "negado"
+      }
+    ]
+  },
+  {
+    "id": "V36",
+    "nota": "Visita preventiva ficticia, sin síntomas ni diagnósticos del catálogo.",
+    "esperados": []
+  },
+  {
+    "id": "V37",
+    "nota": "Paciente con DM2. Se sospecha anemia. Niega conjuntivitis.",
+    "esperados": [
+      {
+        "codigo": "E11.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "D64.9",
+        "estado": "incierto"
+      },
+      {
+        "codigo": "H10.9",
+        "estado": "negado"
+      }
+    ]
+  },
+  {
+    "id": "V38",
+    "nota": "Posible gastritis. Se descarta migraña y se confirma dermatitis.",
+    "esperados": [
+      {
+        "codigo": "K29.7",
+        "estado": "incierto"
+      },
+      {
+        "codigo": "G43.9",
+        "estado": "descartado"
+      },
+      {
+        "codigo": "L30.9",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V39",
+    "nota": "Se descarta infección respiratoria aguda alta. Consta hipertensión arterial en seguimiento.",
+    "esperados": [
+      {
+        "codigo": "J06.9",
+        "estado": "descartado"
+      },
+      {
+        "codigo": "I10",
+        "estado": "confirmado"
+      }
+    ]
+  },
+  {
+    "id": "V40",
+    "nota": "Se documenta hipotiroidismo e hiperlipidemia. Niega cefalea.",
+    "esperados": [
+      {
+        "codigo": "E03.9",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "E78.5",
+        "estado": "confirmado"
+      },
+      {
+        "codigo": "R51",
+        "estado": "negado"
+      }
+    ]
+  }
+]
