@@ -112,3 +112,11 @@ Datos provienen de los JSON entregados. El filtro que exige evidencia literal pe
 - El ZIP de entrega fue preparado **sin** el `.env` del autor ni su entorno Python.
 - El código y el informe deben acompañarse de un video de escritorio de **máximo 10 minutos mostrando el rostro en una esquina**, según la consigna.
 - Referencias: [OMS, CIE-10 2019](https://icd.who.int/browse10/2019/en/), [Studer et al., CRISP-ML(Q), 2021](https://doi.org/10.3390/make3020020).
+
+- ## Video demostrativo
+
+El video presenta la metodología CRISP-ML(Q),
+el funcionamiento con Ollama y Gemini,
+y los resultados de evaluación del sistema.
+
+[Ver o descargar el video demostrativo](https://github.com/DavidMv3/CodificaMed-PLN-CIE10/releases/tag/1.0)
